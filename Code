@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Chatbot {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String userInput;
+
+        System.out.println("Welcome to AI Shopping Assistant! Type 'exit' to quit.");
+        while (true) {
+            System.out.print("Ask me: ");
+            userInput = scanner.nextLine().toLowerCase();
+
+            if (userInput.contains("recommend")) {
+                System.out.println("I recommend: Earings and Heels.");
+            } else if (userInput.contains("cart")) {
+                System.out.println("You have 2 items in your cart: Dress and Rings.");
+            } else if (userInput.contains("track")) {
+                System.out.println("Your order is out for delivery. Estimated arrival: Tomorrow.");
+            } else if (userInput.equals("exit")) {
+                System.out.println("Thank you for shopping!");
+                break;
+            } else {
+                System.out.println(" Please try again.");
+            }
+        }
+        scanner.close();
+    }
+}
